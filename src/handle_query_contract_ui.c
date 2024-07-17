@@ -15,25 +15,21 @@ void set_address_ui(ethQueryContractUI_t *msg, context_t *context) {
         case COMPOUND_REPAY_BORROW_ON_BEHALF:
             getEthAddressStringFromBinary(context->dest,
                                           msg->msg + 2,
-                                          msg->pluginSharedRW->sha3,
                                           chainid);
             break;
         case COMPOUND_TRANSFER:
             getEthAddressStringFromBinary(context->dest,
                                           msg->msg + 2,
-                                          msg->pluginSharedRW->sha3,
                                           chainid);
             break;
         case COMPOUND_LIQUIDATE_BORROW:
             getEthAddressStringFromBinary(context->dest,
                                           msg->msg + 2,
-                                          msg->pluginSharedRW->sha3,
                                           chainid);
             break;
         case COMPOUND_VOTE_DELEGATE:
             getEthAddressStringFromBinary(context->dest,
                                           msg->msg + 2,
-                                          msg->pluginSharedRW->sha3,
                                           chainid);
             break;
     }
@@ -168,7 +164,6 @@ static void set_third_param_ui(ethQueryContractUI_t *msg, context_t *context) {
             uint64_t chainid = 0;
             getEthAddressStringFromBinary(context->collateral,
                                           msg->msg + 2,
-                                          msg->pluginSharedRW->sha3,
                                           chainid);
             break;
     }
